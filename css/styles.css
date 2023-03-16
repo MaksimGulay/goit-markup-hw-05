@@ -231,6 +231,8 @@ img {
     border: none;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
     padding: 0%;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 
@@ -409,6 +411,8 @@ img {
     height: 100%;
     border-radius: 50%;
     background-color: var(--main-butons-color);
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 
@@ -463,12 +467,16 @@ img {
     color: #8E8F99;
     border: 1px solid #8E8F99;
     padding: 16px 32px;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .customers-icon {
     width: 104px;
     height: 56px;
     fill: #8E8F99;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .customers-link:hover .customers-icon {
@@ -541,6 +549,9 @@ img {
     height: 100%;
     border-radius: 50%;
     background-color: rgba(255, 255, 255, 0.1);
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
 }
 
 .footer-social-link:hover {
@@ -580,6 +591,8 @@ img {
     border-color: #E7E9FC;
     border: 1px solid #E7E9FC;
     cursor: pointer;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .buttons:focus,
@@ -604,6 +617,8 @@ img {
     text-decoration: none;
     padding: 12px 24px;
     border-radius: 4px;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .buttons-text:focus,
@@ -647,6 +662,8 @@ img {
     border-bottom: 1px solid #E7E9FC;
     border-left: 1px solid #E7E9FC;
     border-right: 1px solid #E7E9FC;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .presentation-subtitle {
@@ -671,10 +688,14 @@ img {
     text-decoration: none;
     outline: none;
     display: block;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .presentation-link:focus {
     box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 
@@ -682,6 +703,8 @@ img {
 .presentation-item:focus {
     box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
     outline: none;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .presentation-top-wrap {
@@ -712,4 +735,71 @@ img {
 
 .presentation-item:hover .presentation-item-text-overlay {
     transform: translateY(0);
+}
+
+
+.backdrop {
+    width: 100%;
+    height: 100%;
+    left: 0px;
+    top: 0px;
+    position: fixed;
+    background: rgba(46, 47, 66, 0.4);
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal {
+    position: absolute;
+    width: 408px;
+    height: 576px;
+    background: #FCFCFC;
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 24px;
+
+}
+
+.modal-close {
+    Width: 24px;
+    Height: 24px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: auto;
+    background: #E7E9FC;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.close-icon {
+    fill: #000000;
+    width: 8px;
+    height: 8px;
+}
+
+.is-hidden {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+}
+
+.modal-close:hover .close-icon {
+    fill: #FFFFFF;
+}
+
+.modal-close:focus .close-icon {
+    fill: #FFFFFF;
+}
+
+.modal-close:is(:hover, :focus) {
+    background: var(--main-buttons-focuse-color);
+    border-color: var(--main-buttons-focuse-color);
+    outline: none;
 }
